@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <title>Aptech Korangi | Chatbot</title>
+    
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+    <div id="canvas-container">
+
+
+        <div id="speech-bubble"></div>
+
+        <div class="canva-controls">
+            <button class="btn btn-warning fw-bold" id="enter-aptech-btn">Open Door</button>
+
+        </div>
+
+        <div class="walk-pad">
+            <button class="btn btn-warning" id="btn-back">▼</button>
+            <button class="btn btn-warning" id="btn-fwd">▲</button>
+        </div>
+    </div>
+
+    <video id="custom-mp4-video" src="assets/intro.mp4" loop playsinline crossorigin="anonymous"
+        style="display:none;"></video>
+
+    <div class="chat-panel">
+        <div class="chat-header">
+            <div class="status-wrap">
+                <div>
+                    <h2 class="text-white">Aptron (ACCP AI+) Chatbot</h2>
+                    <span id="bot-state">Let's talk with Aptron</span>
+                </div>
+            </div>
+            <button class="btn btn-primary active" id="voice-toggle">Voice: ON</button>
+        </div>
+
+        <div class="chat-messages text-white" id="chat-messages">
+            <div class="msg bot">
+                Hello Welcome to Aptech Korangi
+            </div>
+        </div>
+
+       
+
+        <form class="chat-input-area" id="chat-form">
+            <input type="text" id="user-input" placeholder="Ask from Aptron..." autocomplete="off" />
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+
+    <script type="module" src="assets/function.js"></script>
+    <script src="assets/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
